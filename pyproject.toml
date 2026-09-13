@@ -1,7 +1,7 @@
 [project]
 name = "staticsite"
 version = "0.1.0"
-description = "Add your description here"
+description = "Static Site Generator from md -> html"
 readme = "README.md"
 authors = [
     { name = "danl1k3", email = "like.danyt@gmail.com" }
