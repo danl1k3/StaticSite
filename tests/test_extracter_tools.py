@@ -10,7 +10,7 @@ class test_extracter_tools(unittest.TestCase):
     def test_extract_markdown_links(self):
         matches = extract_markdown_links(
                 "This is text with a link [to boot dev](https://www.boot.dev)")
-        self.assertListEqual([("to boot dev", "https://www.boot.dev")])
+        self.assertListEqual([("to boot dev", "https://www.boot.dev")], matches)
     
     def test_extract_markdown_images_double(self):
         matches = extract_markdown_images(
@@ -22,7 +22,7 @@ class test_extracter_tools(unittest.TestCase):
                 ]
                 , matches)
     
-    def test_extract_markdown_links(self):
+    def test_extract_markdown_links_double(self):
         matches = extract_markdown_links(
                 "This is text with a link [to boot dev](https://www.boot.dev) and [to youtube](https://www.youtube.com/@bootdotdev)")
         self.assertListEqual(
