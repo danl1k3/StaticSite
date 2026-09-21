@@ -7,7 +7,7 @@ import sys
 def main():
     source_dir = "static"
     dest_dir = "docs"
-    basepath = sys.argv[1] if len(sys.argv[1]) > 1 else "/"
+    basepath = sys.argv[1] if len(sys.argv) > 1 else "/"
     if os.path.exists(dest_dir):
         shutil.rmtree(dest_dir)
     
