@@ -1,7 +1,7 @@
 import os
 import shutil
 from copy_dir_content import copy_dir_content
-from generate_page import generate_page
+from generate_pages_recursive import generate_pages_recursive
 
 def main():
     source_dir = "static"
@@ -12,11 +12,11 @@ def main():
     
     copy_dir_content(source_dir, dest_dir)
 
-    from_path = "content/index.md"
+    from_path = "content"
     template_path = "template.html"
-    dest_path = "public/index.html"
+    dest_path = "public"
     
-    generate_page(from_path, template_path, dest_path)
+    generate_pages_recursive(from_path, template_path, dest_path)
     
 
 if __name__ == "__main__":
